@@ -69,9 +69,9 @@ void Scene::init(){
     Spheres* sTwo=new Spheres(glm::vec3(.6, -1.2, -2.5),0.3,REFRACT);
     Spheres* sThree=new Spheres(glm::vec3(-.2, -1.3, -2.0),0.2,REFRACT);
 
-    Planes* left=new Planes(xAxis, 1.5, glm::vec3(0.75,0.4,0.6));
-    Planes* right=new Planes(xAxis, -1.5, glm::vec3(0.5,0.75,0.5));
-    Planes* top=new Planes(yAxis, 1.5, glm::vec3(0.5,0.5,0.75));
+    Planes* left=new Planes(xAxis, 1.5, glm::vec3(0.8,0.3,0.3));
+    Planes* right=new Planes(xAxis, -1.5, glm::vec3(0.3,0.8,0.3));
+    Planes* top=new Planes(yAxis, 1.5, glm::vec3(0.3,0.3,0.8));
     Planes* bottom=new Planes(yAxis, -1.5, glm::vec3(0.75,0.75,0.75));
     Planes* back=new Planes(zAxis, -5.0, glm::vec3(0.75,0.75,0.75));
 

@@ -4,6 +4,9 @@
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 
+int fbw=SCR_WIDTH;
+int fbh=SCR_HEIGHT;
+
 View::View()
 {
     
@@ -66,6 +69,10 @@ int View::initWindow()
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }    
+
+    // 获取 framebuffer 的真实尺寸并设置视口
+    glfwGetFramebufferSize(window, &fbw, &fbh);
+    glViewport(0, 0, fbw, fbh);  // 设置为 framebuffer 尺寸而不是逻辑窗口尺寸
 
  
     // tell stb_image.h to flip loaded texture's on the y-axis (before loading model).
@@ -188,8 +195,9 @@ int View::displaySPPM()
 
 
 
-     
-     
+    //imageData
+    unsigned char* imageData=(unsigned char*)malloc(4*sizeof(unsigned char)*fbw*fbh);
+    
 
      /*
      for(int i=0;i<SCR_WIDTH;i++)
@@ -249,17 +257,23 @@ int View::displaySPPM()
         photonMapShader.use();
         glBindVertexArray(rayTraceData.VAO);
 
-
+        glPointSize(4.0f);
         glDrawArrays(GL_POINTS, 0, SCR_HEIGHT*SCR_WIDTH); 
         //glDrawArrays(GL_TRIANGLES, 0, 36); 
         //std::cout<<"0: "<<glGetError()<<std::endl;
 
+        glFinish();
+        //output the result
+        glReadPixels(0,0,fbw,fbh,GL_RGBA,GL_UNSIGNED_BYTE,imageData);
+        stbi_flip_vertically_on_write(true);
+        int res=stbi_write_png("PM_real.png",fbw,fbh,4,imageData,0);
         
 
         // 检查并调用事件，交换缓冲
         glfwPollEvents();
         glfwSwapBuffers(window);
-
+        
+        
         
         
     }

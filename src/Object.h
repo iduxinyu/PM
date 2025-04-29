@@ -4,8 +4,8 @@
 #include <iostream>
 #include <glm/glm.hpp>
 
-#define SCR_WIDTH 300
-#define SCR_HEIGHT 300
+#define SCR_WIDTH 400  
+#define SCR_HEIGHT 400
 
 
 

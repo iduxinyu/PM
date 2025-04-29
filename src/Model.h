@@ -18,6 +18,7 @@
 #include <vector>
 
 #include "stb_image.h"
+#include "stb_image_write.h"
 #include "Mesh.h"
 #include "Shader.h"
 

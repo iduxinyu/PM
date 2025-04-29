@@ -98,7 +98,8 @@ KDNode* KDTree::build(std::vector<HitPoint*> hitpoints, int start, int end, int 
 
     p->point=hitpoints[m];
 
-    //std::cout<<"m: "<<m<<", hitpoint.uv:"<<p->point->ij.x<<", "<<p->point->ij.y<<std::endl;
+    if(m%5000==0)
+        std::cout<<"m: "<<m<<", hitpoint.uv:"<<p->point->ij.x<<", "<<p->point->ij.y<<std::endl;
 
     p->l=build(hitpoints,start,m-1,(compareAxis+1)%3);
     p->r=build(hitpoints,m+1,end,(compareAxis+1)%3);

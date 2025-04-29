@@ -86,8 +86,9 @@ src/main.o: src/main.cpp src/View.h include/glad/glad.h \
  include/assimp/mesh.h include/assimp/light.h include/assimp/camera.h \
  include/assimp/material.h include/assimp/material.inl \
  include/assimp/anim.h include/assimp/metadata.h \
- include/assimp/postprocess.h src/stb_image.h src/Mesh.h src/Shader.h \
- include/glm/gtc/type_ptr.hpp include/glm/gtc/../gtc/quaternion.hpp \
+ include/assimp/postprocess.h src/stb_image.h src/stb_image_write.h \
+ src/Mesh.h src/Shader.h include/glm/gtc/type_ptr.hpp \
+ include/glm/gtc/../gtc/quaternion.hpp \
  include/glm/gtc/../gtc/quaternion.inl \
  include/glm/gtc/../gtc/quaternion_simd.inl include/glm/gtc/type_ptr.inl \
  src/HitPoint.h src/Camera.h src/Object.h src/Cube.h

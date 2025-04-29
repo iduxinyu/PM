@@ -26,8 +26,8 @@
 
 enum Axis{xAxis=0,yAxis=1,zAxis=2};
 
-const unsigned int SCR_WIDTH = 300;
-const unsigned int SCR_HEIGHT = 300;
+const unsigned int SCR_WIDTH = 400;
+const unsigned int SCR_HEIGHT = 400;
 
 
 class Spheres
