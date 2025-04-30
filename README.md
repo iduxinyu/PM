@@ -1,8 +1,8 @@
 # PM
 
 ## Result
-![PM stylized](https://raw.githubusercontent.com/iduxinyu/PM/blob/main/Result/PM.png?raw=true)
 
+![PM Stylized](https://raw.githubusercontent.com/iduxinyu/PM/main/PM.png)
 
 ![PM Physics](https://raw.githubusercontent.com/iduxinyu/PM/main/PM_real.png)
 ## Future Work
