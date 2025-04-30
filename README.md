@@ -1,8 +1,8 @@
 # PM
 
 ## Result
-![PM](https://raw.githubusercontent.com/iduxinyu/PM/main/PM.png)
-
+![PM stylized](https://raw.githubusercontent.com/iduxinyu/PM/main/PM.png)
+![PM Physics](https://raw.githubusercontent.com/iduxinyu/PM/main/PM_real.png)
 ## Future Work
 
 denoise
