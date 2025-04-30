@@ -1,7 +1,7 @@
 # PM
 
 ## Result
-![image text](https:/github.com/PM/PM.png](https://github.com/iduxinyu/PM/blob/main/PM.png)
+![PM](https://raw.githubusercontent.com/iduxinyu/PM/main/PM.png)
 
 ## Future Work
 
